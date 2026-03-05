@@ -4,15 +4,7 @@ import { Shield } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated water background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-deep via-background to-background" />
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-20"
-          style={{
-            background: `radial-gradient(ellipse 80% 60% at 50% 40%, hsl(196 88% 62% / 0.15), transparent)`,
-          }}
-        />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary via-background to-background" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
@@ -20,7 +12,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -54,9 +45,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

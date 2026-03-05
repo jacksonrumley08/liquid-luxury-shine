@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 const CTABanner = () => {
   return (
     <section id="quote" className="section-padding relative z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-background to-navy-deep" />
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground to-foreground" />
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, hsl(196 88% 62% / 0.3), transparent)",
+            "radial-gradient(ellipse 60% 50% at 50% 50%, hsl(196 88% 62% / 0.4), transparent)",
         }}
       />
 
@@ -19,12 +19,14 @@ const CTABanner = () => {
         transition={{ duration: 0.6 }}
         className="relative z-10 max-w-3xl mx-auto text-center"
       >
-        <h2 className="text-4xl sm:text-6xl font-display mb-6">
+        <h2 className="text-4xl sm:text-6xl font-display mb-6 text-background">
           Ready for Cleaner,
           <br />
-          <span className="text-gradient">Healthier Water?</span>
+          <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, hsl(196 88% 62%), hsl(0 0% 100%))" }}>
+            Healthier Water?
+          </span>
         </h2>
-        <p className="font-body text-lg text-muted-foreground mb-10">
+        <p className="font-body text-lg text-background/70 mb-10">
           Schedule your free, no-obligation in-home water consultation today. 
           Discover what's really in your water — and how easy it is to fix.
         </p>

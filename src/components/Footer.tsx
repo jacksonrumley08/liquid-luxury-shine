@@ -2,10 +2,9 @@ import { Phone, Mail, Globe, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 border-t border-primary/10 bg-navy-deep/60 backdrop-blur-sm">
+    <footer className="relative z-10 border-t border-border bg-secondary/50">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo */}
           <div className="text-center md:text-left">
             <span className="font-display text-2xl tracking-[0.2em] text-foreground">
               P<span className="text-primary">U</span>RE
@@ -18,7 +17,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact */}
           <div className="flex flex-col sm:flex-row items-center gap-6 font-body text-sm text-muted-foreground">
             <a href="tel:8327668624" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" /> 832-766-8624
@@ -35,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-primary/10 text-center">
+        <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="font-body text-xs text-muted-foreground">
             © {new Date().getFullYear()} Pure Water Innovations. All rights reserved.
           </p>
