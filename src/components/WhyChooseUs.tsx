@@ -10,7 +10,7 @@ const badges = [
 
 const WhyChooseUs = () => {
   return (
-    <section id="choose" className="section-padding relative z-10 bg-navy-deep/50">
+    <section id="choose" className="section-padding relative z-10 bg-secondary/50">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,21 +22,16 @@ const WhyChooseUs = () => {
             Why Choose <span className="text-gradient">Pure Water Innovations</span>?
           </h2>
 
-          <blockquote className="font-body text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-6 italic">
-            "We believe every family deserves access to clean, safe water — without the luxury price tag."
-          </blockquote>
-
           <p className="font-body text-lg text-muted-foreground leading-relaxed mb-4">
             We offer affordable whole-home filtration solutions with custom installation placement 
             tailored to your home's unique layout. No cookie-cutter setups — every system is designed 
             specifically for you.
           </p>
 
-          <p className="font-body text-lg text-primary mb-12">
+          <p className="font-body text-lg text-primary font-medium mb-12">
             Proud to offer special discounts for first responders, military personnel, and educators.
           </p>
 
-          {/* Trust badges */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {badges.map((badge, i) => (
               <motion.div

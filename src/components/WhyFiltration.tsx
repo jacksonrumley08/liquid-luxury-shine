@@ -1,40 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-
-const stats = [
-  { value: 85, suffix: "%", label: "of US homes have hard water" },
-  { value: 2000, suffix: "+", label: "contaminants found in tap water" },
-  { value: 40, suffix: "%", label: "longer appliance lifespan" },
-];
-
-const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const duration = 2000;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [inView, target]);
-
-  return (
-    <span ref={ref} className="font-display text-5xl sm:text-6xl text-primary">
-      {count.toLocaleString()}{suffix}
-    </span>
-  );
-};
+import { motion } from "framer-motion";
 
 const WhyFiltration = () => {
   return (
@@ -53,29 +17,12 @@ const WhyFiltration = () => {
           <div className="w-20 h-0.5 bg-primary/40 mx-auto" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Stats */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-10"
-          >
-            {stats.map((stat, i) => (
-              <div key={i} className="glass-card p-6">
-                <Counter target={stat.value} suffix={stat.suffix} />
-                <p className="font-body text-muted-foreground mt-2">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Prose */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
@@ -88,6 +35,15 @@ const WhyFiltration = () => {
               dries out your skin and hair, and leaves spots on every surface it touches. Bottled water 
               isn't the answer — it's expensive, wasteful, and doesn't protect your entire home.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass-card p-8"
+          >
             <p className="font-body text-lg text-foreground leading-relaxed">
               A whole-home filtration system is the only way to ensure every drop of water in your home 
               is clean, soft, and safe — from the kitchen sink to the shower to the washing machine.

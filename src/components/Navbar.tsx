@@ -22,12 +22,11 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-navy-deep/90 backdrop-blur-xl border-b border-primary/10 py-3"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-sm py-3"
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <span className="font-display text-2xl tracking-[0.2em] text-foreground">
             P<span className="text-primary">U</span>RE
@@ -37,7 +36,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -50,7 +48,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-4">
           <a href="tel:8327668624" className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
@@ -75,9 +72,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-navy-deep/95 backdrop-blur-xl border-t border-primary/10 mt-3 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border mt-3 px-6 py-4 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
