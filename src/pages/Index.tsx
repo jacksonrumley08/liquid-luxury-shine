@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyFiltration from "@/components/WhyFiltration";
 import Benefits from "@/components/Benefits";
+import OurWork from "@/components/OurWork";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
 import CTABanner from "@/components/CTABanner";
