@@ -4,7 +4,7 @@ import installation2 from "@/assets/installation-2.png";
 import installation3 from "@/assets/installation-3.png";
 
 const photos = [
-  { src: installation1, alt: "Whole home water filtration system installed in garage with dual blue filters and water softener" },
+  { src: installation1, alt: "Exterior water softener and dual blue filtration system installed against brick wall" },
   { src: installation2, alt: "Custom water treatment system installation with conditioning tank and filtration housings" },
   { src: installation3, alt: "Exterior brick wall water filtration installation with dual filters and softener unit" },
 ];
